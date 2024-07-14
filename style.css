@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    @apply bg-red-900;
+}
+
+body::-webkit-scrollbar-thumb {
+    @apply bg-red-600 rounded-lg;
+}
+
+/* dark mode */
+body.dark-mode::-webkit-scrollbar-track {
+    @apply bg-black;
+}
+
+body.dark-mode::-webkit-scrollbar-thumb {
+    @apply bg-gray-600 rounded-lg;
+}
+
+.dark-mode {
+    @apply bg-gray-900 text-blue-200;
+}
+
+.dark-mode .container {
+    @apply bg-gray-700 text-blue-200;
+}
+
+.dark-mode nav {
+    @apply bg-gray-600;
+}
+
+.dark-mode input[type="text"],
+.dark-mode textarea {
+    @apply bg-gray-700 text-blue-200 border-gray-500 border-2;
+}
+
+.dark-mode input[type="submit"] {
+    @apply bg-red-600;
+}
+
+.dark-mode input[type="submit"]:hover {
+    @apply bg-red-700;
+}
+
+/* entry css */
+.dark-mode .information {
+    @apply bg-gray-700 text-blue-200 border-gray-600;
+}
+
+.information .entry {
+    @apply mb-2 p-2.5 border border-gray-300 rounded-sm bg-yellow-500 text-black transition-all duration-200;
+}
+
+.information .entry:hover {
+    @apply bg-red-500 text-white transform scale-105 rounded-3xl;
+}
+
+body.dark-mode .information .entry {
+    @apply bg-gray-800 text-yellow-500 border-gray-700;
+}
+
+body.dark-mode .information .entry:hover {
+    @apply bg-red-900 text-white transform scale-105 rounded-3xl;
+}
+
+.information .entry button {
+    @apply bg-red-600 text-white border-none py-1 px-2.5 rounded cursor-pointer transition-colors duration-300;
+}
+
+.information .entry button:hover {
+    @apply bg-red-700;
+}
